@@ -16,7 +16,7 @@ public class Conexao {
     public boolean conectar(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cenaflix","root", "oooo");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/uc11","root", "oooo");
             return true;
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println("Erro ao conectar: " + ex.getMessage());
@@ -25,10 +25,11 @@ public class Conexao {
     public int salvar(ProdutosDTO func){
         int status;
         try {
-            st = conn.prepareStatement("INSERT INTO filmes VALUES(?, ?, ?)");
-            st.setString(1,func.getNome());
-            st.setInt(2,func.getValor());
-            st.setString(3,func.getStatus());
+            st = conn.prepareStatement("INSERT INTO produtos VALUES(?, ?, ?, ?)");
+            st.setInt(1,func.getId());
+            st.setString(2,func.getNome());
+            st.setInt(3,func.getValor());
+            st.setString(4,func.getStatus());
             
             
             status = st.executeUpdate();
