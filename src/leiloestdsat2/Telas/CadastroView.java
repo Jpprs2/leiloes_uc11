@@ -1,5 +1,6 @@
 package leiloestdsat2.Telas;
 
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import leiloestdsat2.ProdutosDTO;
 import leiloestdsat2.Conexao;
@@ -190,13 +191,10 @@ public class CadastroView extends javax.swing.JFrame {
                     //posicionar o cursor para um próximo
                     NomeCampo.requestFocus();
                 }else if (resposta ==1062){
-                    JOptionPane.showMessageDialog(null,"Nome já foi cadastrado");   
+                    JOptionPane.showMessageDialog(null,"Produto já foi cadastrado");   
                 }else{
                     JOptionPane.showMessageDialog(null,"Erro ao tentar inserir dados");
                 } dao.desconectar(); }
-        
-        
-        
     }//GEN-LAST:event_BtnCadastrarActionPerformed
 
     private void NomeCampoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeCampoActionPerformed
@@ -205,6 +203,7 @@ public class CadastroView extends javax.swing.JFrame {
 
     private void BtnProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProdutosActionPerformed
             ListagemView L = new ListagemView();
+            L.setLocationRelativeTo(null);
             L.setVisible(true);
     }//GEN-LAST:event_BtnProdutosActionPerformed
 

@@ -2,7 +2,7 @@ package leiloestdsat2;
 
 public class ProdutosDTO {
     
-    int Id;
+    int ID;
     String Nome;
     int valor;
     String Status;
@@ -10,21 +10,22 @@ public class ProdutosDTO {
     public ProdutosDTO() {}
 
     public ProdutosDTO(int Id, String Nome, int valor, String Status) {
-        this.Id = Id;
+        this.ID = Id;
         this.Nome = Nome;
         this.valor = valor;
-        this.Status = Status;}
+        this.Status = Status;
+    }
 
     public int getId() {
-        return Id;}
+        return ID;}
     public void setId(int Id) {
-        this.Id = Id;}
+        this.ID = Id;}
 
     public String getNome() {
         return Nome;}
     public void setNome(String Nome) {
         this.Nome = Nome;}
-
+    
     public int getValor() {
         return valor;}
     public void setValor(int valor) {
