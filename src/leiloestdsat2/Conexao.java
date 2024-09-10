@@ -50,7 +50,7 @@ public class Conexao {
         int status;
         try {
             st = conn.prepareStatement("INSERT INTO produtos VALUES(?, ?, ?, ?)");
-            st.setInt(1,func.getId());
+            st.setInt(1,func.getID());
             st.setString(2,func.getNome());
             st.setInt(3,func.getValor());
             st.setString(4,func.getStatus());
@@ -83,7 +83,7 @@ public class Conexao {
             while (resposta.next()) {
                 ProdutosDTO v = new ProdutosDTO();
 
-                v.setId(resposta.getInt("Id"));
+                v.setID(resposta.getInt("Id"));
                 v.setNome(resposta.getString("Nome"));
                 v.setValor(resposta.getInt("Valor"));
                 v.setStatus(resposta.getString("Status"));

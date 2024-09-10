@@ -172,7 +172,7 @@ public class CadastroView extends javax.swing.JFrame {
             Conexao dao = new Conexao();
             boolean status;
             int resposta;
-            v.setId(Integer.parseInt(IdCampo.getText()));
+            v.setID(Integer.parseInt(IdCampo.getText()));
             v.setNome(NomeCampo.getText());
             v.setValor(Integer.parseInt(ValorCampo.getText()));
             v.setStatus("A Venda");
